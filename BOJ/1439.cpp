@@ -7,28 +7,14 @@
 #define FORS(i,s,n) for(int i=(s);i<(n);++i)
 using namespace std;
 
-int i,c1,c2;
+int cnt;
 string s;
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(0);
     cin>>s;
-    while(i<s.size()) {
-        if(s[i]=='1') {
-            ++i;
-            continue;
-        }
-        while(s[i]!='1'&&i<s.size()) ++i;
-        ++c1;
+    FOR(i,s.size()-1) {
+        if(s[i]!=s[i+1]) ++cnt;
     }
-    i=0;
-    while(i<s.size()) {
-        if(s[i]=='0') {
-            ++i;
-            continue;
-        }
-        while(s[i]!='0'&&i<s.size()) ++i;
-        ++c2;
-    }
-    cout<<min(c1,c2);
+    cout<<(cnt+1)/2;
 }
