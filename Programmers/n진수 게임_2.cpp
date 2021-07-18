@@ -9,18 +9,12 @@ using namespace std;
 
 int num=1;
 string s = "0";
+char arr[16] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 
 string convert(int n, int x) {
     string ret = "";
     while(x) {
-        int cur = x%n;
-        if(cur==10 && 10<n) ret += 'A';
-        else if(cur==11 && 11<n) ret += 'B';
-        else if(cur==12 && 12<n) ret += 'C';
-        else if(cur==13 && 13<n) ret += 'D';
-        else if(cur==14 && 14<n) ret += 'E';
-        else if(cur==15 && 15<n) ret += 'F';
-        else ret+=to_string(cur);
+        ret += arr[x%n];
         x/=n;
     }
     reverse(ret.begin(), ret.end());
