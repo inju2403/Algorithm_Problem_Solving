@@ -4,13 +4,13 @@
 #include <algorithm>
 #define FOR(i,n) for(int i=0;i<(n);++i)
 #define FORS(i,s,n) for(int i=(s);i<(n);++i)
-#define INF 987654321
 #define MAX 205
 
 using namespace std;
 typedef pair<int,int> pii;
 typedef long long ll;
 
+const ll INF = 3e9;
 ll mn=INF, dist[3][MAX];
 vector<pii> adj[MAX];
 
