@@ -4,18 +4,18 @@
 #include <algorithm>
 #define FOR(i,n) for(int i=0;i<(n);++i)
 #define FORS(i,s,n) for(int i=(s);i<(n);++i)
-#define LINF 9123456789123456789
+#define INF 987654321
 #define MAX 205
 
 using namespace std;
 typedef pair<int,int> pii;
 typedef long long ll;
 
-ll mn=LINF, dist[3][MAX];
+ll mn=INF, dist[3][MAX];
 vector<pii> adj[MAX];
 
 void dijkstra(int src,int idx) {
-    FOR(i,MAX) dist[idx][i]=LINF;
+    FOR(i,MAX) dist[idx][i]=INF;
     dist[idx][src]=0;
     priority_queue<pii> pq; // 비용, 지점
     pq.push({0,src});
