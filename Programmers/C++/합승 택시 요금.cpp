@@ -4,7 +4,7 @@
 #include <algorithm>
 #define FOR(i,n) for(int i=0;i<(n);++i)
 #define FORS(i,s,n) for(int i=(s);i<(n);++i)
-#define LINF 2123456789123456789
+#define LINF 9123456789123456789
 #define MAX 205
 
 using namespace std;
