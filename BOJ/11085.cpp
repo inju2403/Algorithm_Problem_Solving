@@ -28,7 +28,6 @@ vector<node> t;
 int n,m,src,sink,a,b,c,parent[MAX];
 
 int getParent(int x) {
-    if(x==-1) return -1;
     return x==parent[x]? x : parent[x]=getParent(parent[x]);
 }
 
