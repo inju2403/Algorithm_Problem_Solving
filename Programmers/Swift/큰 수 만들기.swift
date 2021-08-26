@@ -4,7 +4,7 @@ func solution(_ number:String, _ K:Int) -> String {
     var k = K
     var cnt = 0
     
-    var numbers = Array(number).map({Int(String($0))!})
+    var numbers = Array(number).map{Int(String($0))!}
     var res: [Int] = []
     
     for i in 0..<numbers.count {
@@ -31,5 +31,5 @@ func solution(_ number:String, _ K:Int) -> String {
         res.removeLast()
         k-=1
     }
-    return res.map({String($0)}).joined()
+    return res.map{String($0)}.joined()
 }
