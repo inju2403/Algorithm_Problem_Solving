@@ -25,7 +25,7 @@ int solution(int n, vector<int> weak, vector<int> dist) {
                     res = min(res, j+1);
                     break;
                 }
-                int next = j+1;
+                int next = i+1;
                 while(weak[next]<=st) ++next;
                 st = weak[next];
             }
