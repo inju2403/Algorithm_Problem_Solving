@@ -10,11 +10,11 @@ vector<string> res;
 unordered_map<string, int> um[11];
 
 void dfs(int idx, int cnt, string& s, string& cur) {
-    if(idx>s.size()) return;
     if(cur.size()==cnt) {
         ++um[cnt][cur];
         return;
     }
+    if(idx==s.size()) return;
     cur+=s[idx];
     dfs(idx+1,cnt,s,cur);
     cur.pop_back();
