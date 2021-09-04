@@ -9,6 +9,7 @@ func dfs(_ idx:Int, _ cnt:Int, _ s:[Character], _ cur: inout [Character]) {
         var val = 0
         if var num = hash[cnt][str] {val=num}
         hash[cnt].updateValue(val+1, forKey: str)
+        return
     }
     for i in idx..<s.count {
         cur.append(s[i])
