@@ -50,7 +50,8 @@ string solution(string id) {
     if(res[res.size()-1]=='.') res.pop_back();
     
     //7
-    while(res.size()<=2) res+=res.back();
+    char c = res.back();
+    while(res.size()<=2) res+=c;
     
     return res;
 }
