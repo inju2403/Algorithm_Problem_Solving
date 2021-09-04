@@ -4,7 +4,7 @@
 #define FORS(i,s,n) for(int i=(s);i<(n);++i)
 using namespace std;
 
-int mx;
+int res,mx;
 
 int solution(vector<vector<int> > land) {
     FORS(y,1,land.size()) {
@@ -18,6 +18,6 @@ int solution(vector<vector<int> > land) {
         }
     }
 
-    FOR(x,land[0].size()) mx=max(mx,land[land.size()-1][x]);
-    return mx;
+    FOR(x,land[0].size()) res=max(res,land[land.size()-1][x]);
+    return res;
 }
