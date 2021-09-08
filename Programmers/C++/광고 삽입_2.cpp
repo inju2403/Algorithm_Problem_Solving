@@ -68,17 +68,18 @@ string solution(string play_time, string adv_time, vector<string> logs) {
     long long sum = 0;
     FOR(i,interval) sum+=t[i];
     long long mx = sum;
-    res = "00:00:00";
     
     int l = 0, r = interval-1;
+    int val = l;
     while(r<last-1) {
         sum -= t[l++];
         sum += t[++r];
         if(mx < sum) {
             mx = sum;
-            res = go(l);
+            val = l;
         }
     }
     
+    res = go(val);
     return res;
 }
