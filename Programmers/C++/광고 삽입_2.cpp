@@ -74,8 +74,8 @@ string solution(string play_time, string adv_time, vector<string> logs) {
     while(r<last-1) {
         sum -= t[l++];
         sum += t[++r];
-        if(sum > mx) {
-            sum = mx;
+        if(mx < sum) {
+            mx = sum;
             res = go(l);
         }
     }
