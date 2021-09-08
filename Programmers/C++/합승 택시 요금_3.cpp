@@ -39,8 +39,6 @@ void djikstra(int src, vector<ll>& dist) {
     }
 }
 
-using namespace std;
-
 int solution(int N, int s, int a, int b, vector<vector<int>> fares) {
     n=N;
     for(auto x: fares) {
