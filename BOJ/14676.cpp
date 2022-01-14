@@ -37,9 +37,10 @@ int main() {
                 cout<<"Lier!";
                 return 0;
             }
-            ++um[b];
-            for(auto x: adj[b]) {
-                --inDegree[x];
+            if(++um[b] == 1) {
+                for(auto x: adj[b]) {
+                    --inDegree[x];
+                }
             }
         }
         else {
